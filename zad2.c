@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 #include <libpq-fe.h>
 
-#define MAX 1000
+#define MAX_LENGTH 1000
 
 void dropTable(char file[], PGconn *conn);
 void createTable(char file[], char line[], PGconn *conn);
@@ -21,12 +21,11 @@ int main(int argc, char *argv[]) {
                 cutName(argv[1]);
                 char line[MAX];
                 fgets(line, MAX, file);
-                char *sql;
                 dropTable(argv[1], conn);
                 int amount = amountField(line);
                 createTable(argv[1], line, conn);
                 int nr_line = 1;
-                while (fgets(line, MAX, file)) {
+                while (fgets(line, MAX_LENGTH, file)) {
                     if (amount == amountField(line)) {
                         insertInto(argv[1], line, conn);
                     } else printf("Error in Line %d\n", nr_line);

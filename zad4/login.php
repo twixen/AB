@@ -1,5 +1,4 @@
 <?
-
 session_start();
 $users['jan'] = 'abcdef';
 $users['ola'] = '12345';

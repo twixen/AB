@@ -1,5 +1,4 @@
 <?
-
 function logincheck() {
     if (isset($_SESSION['user'])) {
         return $_SESSION['user'];
@@ -10,5 +9,4 @@ function logincheck() {
         return false;
     }
 }
-
 ?>

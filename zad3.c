@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
         sprintf(connect, "host=localhost port=5432 dbname=%s user=dsolinski password=1234", argv[1]);
         PGconn *conn = PQconnectdb(connect);
         if (PQstatus(conn) == CONNECTION_OK) {
-            printf("<!DOCTYPE html><html><head><title>Zad3</title><meta charset=\"utf-8\"/><style>table{margin:10px auto;font-family:Trebuchet MS;}td,th{padding:3px;}td{background-color:#9BF;border:1px solid #369;}th{background-color:#DC7;border:1px solid #963;}</style></head><body>");
+            printf("<!DOCTYPE html><html><head><title>Zad3</title><meta charset=\"utf-8\"/><style>table{margin:10px auto;font-family:Trebuchet MS;}td,th{padding:3px;}td{background-color:#8CF;border:1px solid #369;}th{background-color:#8C7;border:1px solid #484;}</style></head><body>");
             int i;
             for (i = 2; i < argc; i++) {
                 char *select = malloc((strlen(argv[i]) + 20) * sizeof (char));
