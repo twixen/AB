@@ -1,4 +1,4 @@
-Aplikacje Bazodanowe
+﻿Aplikacje Bazodanowe
 ==
 dr Robert Fidytek
 --

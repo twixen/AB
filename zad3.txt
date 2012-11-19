@@ -1,7 +1,7 @@
-Napisaæ w jêzyku C w³asny odpowiednik funkcji
+ï»¿NapisaÄ‡ w jÄ™zyku C wÅ‚asny odpowiednik funkcji
 void PQprint(FILE *output, const PQresult *result, const PQprintOpt *options);
-znajduj¹cej siê w bibliotece libpq.
+znajdujÄ…cej siÄ™ w bibliotece libpq.
 
-Funkcja ma umo¿liwiaæ wypisanie wyniku zapytania SELECT jako atrakcyjnej tabeli HTML. Obowi¹zuj¹ standardy HTML5 i CSS3.
-Wywo³anie programu: ./program nazwa_bazy nazwa_tabeli > strona1.html ma utworzyæ stronê HTML zgodn¹ ze standardem http://validator.w3.org/ zawieraj¹c¹ wszystkie rekordy tabeli nazwa_tabeli z bazy danych nazwa_bazy.
-Analogiczne wywo³anie programu ./program nazwa_bazy nazwa_tabeli_1 ... nazwa_tabeli_n > strona2.html ma spowodowaæ wyœwietlenie zawartoœci wszystkich tabel zadanych jako parametry wywo³ania programu.
+Funkcja ma umoÅ¼liwiaÄ‡ wypisanie wyniku zapytania SELECT jako atrakcyjnej tabeli HTML. ObowiÄ…zujÄ… standardy HTML5 i CSS3.
+WywoÅ‚anie programu: ./program nazwa_bazy nazwa_tabeli > strona1.html ma utworzyÄ‡ stronÄ™ HTML zgodnÄ… ze standardem http://validator.w3.org/ zawierajÄ…cÄ… wszystkie rekordy tabeli nazwa_tabeli z bazy danych nazwa_bazy.
+Analogiczne wywoÅ‚anie programu ./program nazwa_bazy nazwa_tabeli_1 ... nazwa_tabeli_n > strona2.html ma spowodowaÄ‡ wyÅ›wietlenie zawartoÅ›ci wszystkich tabel zadanych jako parametry wywoÅ‚ania programu.

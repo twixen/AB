@@ -1,18 +1,18 @@
-Dany jest plik: nazwa.csv
+ï»¿Dany jest plik: nazwa.csv
 lp;imie;nazwisko;ulica;numer;kod;miejscowosc;telefon;email;data_ur
 1;Jan;Kowalski;ul. Nowa;1a;11-234;Budry;123-123-456;jan@go.xxx;1980.05.13
 2;Jerzy;Nowak;ul. Konopnicka;13a/3;00-900;Lichowice;(55)333-44-55;jer@wu.to;1990.03.23
 ...
 
-Napisaæ program w jêzyku C, który w systemie zarz¹dzania baz¹ danych PostgreSQL utworzy:
+NapisaÄ‡ program w jÄ™zyku C, ktÃ³ry w systemie zarzÄ…dzania bazÄ… danych PostgreSQL utworzy:
 
-tabelê o takiej samej nazwie jak nazwa pliku csv (bez rozszerzenia) i o nazwach kolumn identycznymi jak nag³ówki pliku csv,
-pierwsza kolumna tabeli powinna byæ unikatowa,
-ka¿da kolumna powinna byæ typu VARCHAR(30).
+tabelÄ™ o takiej samej nazwie jak nazwa pliku csv (bez rozszerzenia) i o nazwach kolumn identycznymi jak nagÅ‚Ã³wki pliku csv,
+pierwsza kolumna tabeli powinna byÄ‡ unikatowa,
+kaÅ¼da kolumna powinna byÄ‡ typu VARCHAR(30).
 
 Uwagi:
 
-Je¿eli tabela istnieje to nale¿y j¹ najpierw usun¹æ.
-Wywo³anie programu powinno mieæ postaæ ./program nazwa.csv
+JeÅ¼eli tabela istnieje to naleÅ¼y jÄ… najpierw usunÄ…Ä‡.
+WywoÅ‚anie programu powinno mieÄ‡ postaÄ‡ ./program nazwa.csv
 
-Nastêpnie nale¿y utworzyæ w³asny plik csv z sensownymi danymi (co najmniej 5 kolumn i co najmniej 10 wierszy) i przetestowaæ swój program: ./program plik.csv
+NastÄ™pnie naleÅ¼y utworzyÄ‡ wÅ‚asny plik csv z sensownymi danymi (co najmniej 5 kolumn i co najmniej 10 wierszy) i przetestowaÄ‡ swÃ³j program: ./program plik.csv

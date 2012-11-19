@@ -1,20 +1,20 @@
-Stworzyæ formularz w HTML5 typu "login i has³o" przekazuj¹cy te dane do pliku php ("login.html" przekazuje dane do "login.php") metod¹ POST. W formularzu powinno siê znaleŸæ równie¿ pole typu checkbox okreœlaj¹ce "czy zapamiêtaæ mnie na tym komputerze?". Proszê równie¿ zwróciæ uwagê na typ znacznika "input" dla has³a.
+ï»¿StworzyÄ‡ formularz w HTML5 typu "login i hasÅ‚o" przekazujÄ…cy te dane do pliku php ("login.html" przekazuje dane do "login.php") metodÄ… POST. W formularzu powinno siÄ™ znaleÅºÄ‡ rÃ³wnieÅ¼ pole typu checkbox okreÅ›lajÄ…ce "czy zapamiÄ™taÄ‡ mnie na tym komputerze?". ProszÄ™ rÃ³wnieÅ¼ zwrÃ³ciÄ‡ uwagÄ™ na typ znacznika "input" dla hasÅ‚a.
 
-Wewn¹trz skryptu php proszê sprawdziæ czy przes³ane login i has³o zgadzaj¹ siê z list¹ nastêpuj¹cych pozycji:
+WewnÄ…trz skryptu php proszÄ™ sprawdziÄ‡ czy przesÅ‚ane login i hasÅ‚o zgadzajÄ… siÄ™ z listÄ… nastÄ™pujÄ…cych pozycji:
 1, jan, abcdef
 2, ola, 12345
 3, ala, qwerty
-(oczywiœcie mo¿na dopisaæ w³asne)
+(oczywiÅ›cie moÅ¼na dopisaÄ‡ wÅ‚asne)
 
-Jeœli w którymœ przypadku przes³any login i has³o zgadzaj¹ siê z któr¹œ pozycj¹ na liœcie, proszê ustawiæ zmienn¹ w tablicy SESSION o nazwie "user" z wartoœci¹ tak¹ sam¹ jak przes³any login.
+JeÅ›li w ktÃ³rymÅ› przypadku przesÅ‚any login i hasÅ‚o zgadzajÄ… siÄ™ z ktÃ³rÄ…Å› pozycjÄ… na liÅ›cie, proszÄ™ ustawiÄ‡ zmiennÄ… w tablicy SESSION o nazwie "user" z wartoÅ›ciÄ… takÄ… samÄ… jak przesÅ‚any login.
 
-Jeœli pole checkbox zosta³o zaznaczone, nale¿y równie¿ ustawiæ zmienn¹ w tablicy COOKIE (tak¿e o wartoœci takiej jak login).
+JeÅ›li pole checkbox zostaÅ‚o zaznaczone, naleÅ¼y rÃ³wnieÅ¼ ustawiÄ‡ zmiennÄ… w tablicy COOKIE (takÅ¼e o wartoÅ›ci takiej jak login).
 
-Proszê stworzyæ skrypt "logincheck.php", w której znajdzie siê jedna funkcja "logincheck()". Ma ona sprawdzaæ, czy zmienna $_SESSION['user'] istnieje (funkcja isset() ) i jeœli tak - zwracaæ wartoœæ tej zmiennej. W przeciwnym wypadku powinna sprawdziæ, czy istnieje ustawiona zmienna $_COOKIE['user']. Jeœli tak - ustawiæ wartoœæ $_SESSION['user'] na tê sam¹ wartoœæ i zwróciæ j¹. Jeœli nie ma ani zmiennej sesyjnej, ani ciastka, funkcja powinna zwróciæ FALSE.
+ProszÄ™ stworzyÄ‡ skrypt "logincheck.php", w ktÃ³rej znajdzie siÄ™ jedna funkcja "logincheck()". Ma ona sprawdzaÄ‡, czy zmienna $_SESSION['user'] istnieje (funkcja isset() ) i jeÅ›li tak - zwracaÄ‡ wartoÅ›Ä‡ tej zmiennej. W przeciwnym wypadku powinna sprawdziÄ‡, czy istnieje ustawiona zmienna $_COOKIE['user']. JeÅ›li tak - ustawiÄ‡ wartoÅ›Ä‡ $_SESSION['user'] na tÄ™ samÄ… wartoÅ›Ä‡ i zwrÃ³ciÄ‡ jÄ…. JeÅ›li nie ma ani zmiennej sesyjnej, ani ciastka, funkcja powinna zwrÃ³ciÄ‡ FALSE.
 
-Na koniec utwórz skrypt "welcome.php". Do skryptu nale¿y do³¹czyæ (funkcja include() lub require() ) plik "logincheck.php" i sprawdziæ wartoœæ funkcji "logincheck()". Jeœli t¹ wartoœci¹ jest FALSE - wyœwietliæ komunikat "nie jesteœ zalogowany!" oraz link do strony login.html. W przeciwnym wypadku wyœwietliæ j¹ w postaci "Witaj <login>!" oraz dowolnie wybrany dowcip.
-Kolor czcionki dowcipu powinien byæ przes³any do sktyptu "welcome.php" metod¹ GET.
+Na koniec utwÃ³rz skrypt "welcome.php". Do skryptu naleÅ¼y doÅ‚Ä…czyÄ‡ (funkcja include() lub require() ) plik "logincheck.php" i sprawdziÄ‡ wartoÅ›Ä‡ funkcji "logincheck()". JeÅ›li tÄ… wartoÅ›ciÄ… jest FALSE - wyÅ›wietliÄ‡ komunikat "nie jesteÅ› zalogowany!" oraz link do strony login.html. W przeciwnym wypadku wyÅ›wietliÄ‡ jÄ… w postaci "Witaj <login>!" oraz dowolnie wybrany dowcip.
+Kolor czcionki dowcipu powinien byÄ‡ przesÅ‚any do sktyptu "welcome.php" metodÄ… GET.
 
 Uwagi:
 
-Strony winikowe powinny siê walidowaæ (HTML5, CSS3).
+Strony winikowe powinny siÄ™ walidowaÄ‡ (HTML5, CSS3).

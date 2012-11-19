@@ -1,0 +1,18 @@
+﻿Dane są encje:
+
+a) student(id_student, imie, nazwisko,pesel, nr_indeksu, data_ur, ulica, numer, kod, miejscowosc, tel, email, notka)
+b) projekt(id_projekt, nazwa, opis,data_rozp, data_zak)
+
+Każdy student może realizować wiele projektów. Do realizacji każdego projektu może być przydzielonych wielu studentów. Oznacza to, że pomiędzy tymi encjami jest związek N:M (wiele do wielu).
+
+    Napisać skrypt SQL, który wygeneruje strukturę bazy danych (zwróć uwagę na dobór ograniczeń na kolumny) i doda przykładowe rekordy. Skrypt (lub odpowiednia wersja skryptu) powinien się poprawnie wykonać w MySQL, SQL Server, PostgreSQL, Oracle.
+
+    Napisać interfejs w PHP dla powyższej bazy danych uwzględniający:
+        dodawanie, usuwanie, modyfikację, wyświetlanie danych studentów i projektów,
+        zmianę przydału studentów do realizowanego projektu,
+        wyszukiwanie studentów (po nazwisku oraz po dacie urodzenia) i projektów (po nazwie projektu).
+    Na chwilą obecną nie jest znana informacja z jakim systemem zarządzania bazą danych ma współpracować napisany interfejs (użyj warstwy abstrakcji).
+
+    Skrypt PHP powinien generować stronę WWW napisaną w standardzie HTML5 i CSS3. (Sprawdź, czy strony wynikowe się walidują.)
+
+    Zadbaj o sprawdzanie poprawności pól formularza (np: sprawdzanie sumy kontrolnej przesłanego numeru pesel).
