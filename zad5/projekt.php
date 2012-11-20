@@ -45,9 +45,9 @@ if (!empty($_GET['del'])) {
         Nazwa:
         <input type="text" name="nazwa" value="<?= $result['nazwa'] ?>" maxlength="50" required="required" title="length: 1-50"><br />
         Data rozpoczęcia:
-        <input type="date" name="data_rozp" value="<?= $result['data_rozp'] ?>" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
+        <input type="text" name="data_rozp" value="<?= $result['data_rozp'] ?>" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
         Data zakończenia:
-        <input type="date" name="data_zak" value="<?= $result['data_zak'] ?>" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
+        <input type="text" name="data_zak" value="<?= $result['data_zak'] ?>" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
         Opis:<br />
         <textarea  name="opis" rows="5" cols="30" required="required" title="opis"><?= $result['opis'] ?></textarea><br />
         <input type="hidden" name="id" value="<?= $_GET['upd'] ?>">
@@ -57,9 +57,9 @@ if (!empty($_GET['del'])) {
         Nazwa:
         <input type="text" name="nazwa" maxlength="50" required="required" title="length: 1-50"><br />
         Data rozpoczęcia:
-        <input type="date" name="data_rozp" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
+        <input type="text" name="data_rozp" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
         Data zakończenia:
-        <input type="date" name="data_zak" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
+        <input type="text" name="data_zak" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
         Opis:<br />
         <textarea name="opis" rows="5" cols="30" required="required" title="opis"></textarea><br />
         <input type="hidden" name="name" value="<?= $_REQUEST['name'] ?>">
@@ -84,7 +84,7 @@ if (!empty($_GET['del'])) {
         $sth->bindValue(':nazwa', '%' . $_REQUEST['name'] . '%', PDO::PARAM_STR);
     }
     $sth->execute();
-    $result = $sth->setFetchMode(PDO::FETCH_NUM);
+    $result = $sth->setFetchMode(PDO::FETCH_ASSOC);
     ?>
     <? while ($row = $sth->fetch()): ?>
         <tr>
@@ -92,11 +92,11 @@ if (!empty($_GET['del'])) {
                 <td><?= $value ?></td>
             <? endforeach ?>
             <? if (empty($_REQUEST['name'])): ?>
-                <td><a href="projekt.php?del=<?= $row[0] ?>">X</a></td>
-                <td><a href="projekt.php?upd=<?= $row[0] ?>">Y</a></td>
+                <td><a href="projekt.php?del=<?= $row['id_projekt'] ?>">X</a></td>
+                <td><a href="projekt.php?upd=<?= $row['id_projekt'] ?>">Y</a></td>
             <? else: ?>
-                <td><a href="projekt.php?name=<?= $_REQUEST['name'] ?>&amp;del=<?= $row[0] ?>">X</a></td>
-                <td><a href="projekt.php?name=<?= $_REQUEST['name'] ?>&amp;upd=<?= $row[0] ?>">Y</a></td>
+                <td><a href="projekt.php?name=<?= $_REQUEST['name'] ?>&amp;del=<?= $row['id_projekt'] ?>">X</a></td>
+                <td><a href="projekt.php?name=<?= $_REQUEST['name'] ?>&amp;upd=<?= $row['id_projekt'] ?>">Y</a></td>
             <? endif ?>
         </tr>
     <? endwhile ?>
