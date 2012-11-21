@@ -26,6 +26,9 @@ if (!empty($_GET['del'])) {
     $sth = $db->prepare('DELETE FROM projekt WHERE id_projekt = :id');
     $sth->bindValue(':id', $_GET['del'], PDO::PARAM_INT);
     $sth->execute();
+	$sth = $db->prepare('DELETE FROM zapis WHERE id_projekt = :id');
+    $sth->bindValue(':id', $_GET['del'], PDO::PARAM_INT);
+    $sth->execute();
     header('Location:' . $_SERVER["SCRIPT_URI"]);
 }
 ?>
