@@ -51,7 +51,7 @@ if (!empty($_GET['del'])) {
         Opis:<br />
         <textarea  name="opis" rows="5" cols="30" required="required" title="opis"><?= $result['opis'] ?></textarea><br />
         <input type="hidden" name="id" value="<?= $_GET['upd'] ?>">
-        <input type="hidden" name="name" value="<?= $_REQUEST['name'] ?>">
+        <? if (!empty($_REQUEST['name'])): ?><input type="hidden" name="name" value="<?= $_REQUEST['name'] ?>"><? endif ?>
         <input type="submit" name="upd" value="Zapisz">
     <? else: ?> 
         Nazwa:
@@ -62,7 +62,6 @@ if (!empty($_GET['del'])) {
         <input type="text" name="data_zak" maxlength="10" required="required" title="format: RRRR-MM-DD"><br />
         Opis:<br />
         <textarea name="opis" rows="5" cols="30" required="required" title="opis"></textarea><br />
-        <input type="hidden" name="name" value="<?= $_REQUEST['name'] ?>">
         <input type="submit" name="add" value="Dodaj">
     <? endif ?>
 </form>
@@ -84,7 +83,7 @@ if (!empty($_GET['del'])) {
         $sth->bindValue(':nazwa', '%' . $_REQUEST['name'] . '%', PDO::PARAM_STR);
     }
     $sth->execute();
-    $result = $sth->setFetchMode(PDO::FETCH_ASSOC);
+    $sth->setFetchMode(PDO::FETCH_ASSOC);
     ?>
     <? while ($row = $sth->fetch()): ?>
         <tr>
@@ -92,11 +91,11 @@ if (!empty($_GET['del'])) {
                 <td><?= $value ?></td>
             <? endforeach ?>
             <? if (empty($_REQUEST['name'])): ?>
-                <td><a href="projekt.php?del=<?= $row['id_projekt'] ?>">X</a></td>
-                <td><a href="projekt.php?upd=<?= $row['id_projekt'] ?>">Y</a></td>
+                <td><a href="<?= $_SERVER["PHP_SELF"] ?>?del=<?= $row['id_projekt'] ?>">X</a></td>
+                <td><a href="<?= $_SERVER["PHP_SELF"] ?>?upd=<?= $row['id_projekt'] ?>">Y</a></td>
             <? else: ?>
-                <td><a href="projekt.php?name=<?= $_REQUEST['name'] ?>&amp;del=<?= $row['id_projekt'] ?>">X</a></td>
-                <td><a href="projekt.php?name=<?= $_REQUEST['name'] ?>&amp;upd=<?= $row['id_projekt'] ?>">Y</a></td>
+                <td><a href="<?= $_SERVER["PHP_SELF"] ?>?name=<?= $_REQUEST['name'] ?>&amp;del=<?= $row['id_projekt'] ?>">X</a></td>
+                <td><a href="<?= $_SERVER["PHP_SELF"] ?>?name=<?= $_REQUEST['name'] ?>&amp;upd=<?= $row['id_projekt'] ?>">Y</a></td>
             <? endif ?>
         </tr>
     <? endwhile ?>
